@@ -90,10 +90,10 @@ export default function Home() {
   ]
 
   return (
-    <main className="min-h-screen bg-white dark:bg-black transition-colors duration-300">
+    <main className="min-h-screen bg-[rgb(var(--background))] text-[rgb(var(--foreground))] transition-colors duration-300">
       {/* Particles background */}
       <div className="fixed inset-0 z-0">
-        <Particles count={100} color="#00A19B" />
+        <Particles count={100} color="#2A8B8B" />
       </div>
 
       {/* Main content with glitch effects */}
@@ -133,19 +133,19 @@ export default function Home() {
               variants={shapeAnimation}
               initial="initial"
               animate="animate"
-              className="absolute top-1/4 left-1/4 w-32 h-32 border-2 border-[#00A19B] rounded-full"
+              className="absolute top-1/4 left-1/4 w-32 h-32 border-2 border-[#2A8B8B] rounded-full"
             />
             <motion.div
               variants={shapeAnimation}
               initial="initial"
               animate="animate"
-              className="absolute bottom-1/4 right-1/4 w-40 h-40 border-2 border-[#00A19B] rotate-45"
+              className="absolute bottom-1/4 right-1/4 w-40 h-40 border-2 border-[#2A8B8B] rotate-45"
             />
           </motion.div>
 
           {/* Particle Effect Layer */}
           <div className="absolute inset-0 z-10">
-            <Particles count={50} color="#00A19B" />
+            <Particles count={50} color="#2A8B8B" />
           </div>
 
           <div className="relative container mx-auto px-4 h-full flex items-center z-20">
@@ -174,7 +174,7 @@ export default function Home() {
                 variants={fadeIn}
                 whileHover={{ scale: 1.05 }}
               >
-                <Button className="bg-[#00A19B] hover:bg-[#00A19B]/90 text-white">
+                <Button className="bg-gradient-to-r from-[#1B4D4C] to-[#39B7B7] hover:from-[#39B7B7] hover:to-[#1B4D4C] text-white">
                   Get Started
                 </Button>
               </motion.div>
@@ -189,18 +189,19 @@ export default function Home() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="py-20 bg-[#0A192F] dark:bg-black"
+          className="py-20 bg-[rgb(var(--background))] dark:bg-black"
         >
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="text-3xl font-bold text-white text-center mb-16"
+              className="text-3xl font-bold text-[rgb(var(--primary))] dark:text-white text-center mb-16"
             >
               <TypewriterText 
                 text="THE SEQUOIA DIFFERENCE" 
                 delay={300}
+                className="text-3xl font-bold"
               />
             </motion.div>
             <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -239,18 +240,19 @@ export default function Home() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="py-20 bg-black dark:bg-[#0A192F]"
+          className="py-20 bg-[rgb(var(--background))] dark:bg-black"
         >
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="text-3xl font-bold text-white text-center mb-16"
+              className="text-3xl font-bold text-[rgb(var(--primary))] dark:text-white text-center mb-16"
             >
               <TypewriterText 
                 text="LEADING SECURITY SERVICES" 
                 delay={300}
+                className="text-3xl font-bold"
               />
             </motion.div>
             <motion.div
@@ -291,19 +293,19 @@ export default function Home() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="py-20 bg-[#001F3F]"
+          className="py-20 bg-[rgb(var(--background))] dark:bg-[#001F3F]"
         >
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="text-3xl font-bold text-center text-white mb-16 relative z-10"
+              className="text-3xl font-bold text-center text-[rgb(var(--primary))] dark:text-white mb-16 relative z-10"
             >
               <TypewriterText 
                 text="INNOVATIVE SECURITY PROGRAMS" 
                 delay={300}
-                className="text-3xl font-bold text-white"
+                className="text-3xl font-bold"
               />
             </motion.div>
             <motion.div
@@ -356,7 +358,7 @@ export default function Home() {
               <TypewriterText 
                 text="SECURITY SERVICE LOCATIONS"
                 delay={300}
-                className="text-3xl font-bold text-[#00A19B]"
+                className="text-3xl font-bold text-[#2A8B8B]"
               />
             </motion.div>
             <div className="w-full h-[500px] rounded-lg overflow-hidden">
@@ -381,14 +383,14 @@ export default function Home() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="py-20 bg-[#0A192F]"
+          className="py-20 bg-[rgb(var(--background))] dark:bg-black"
         >
           <div className="container mx-auto px-4">
             <motion.h2
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
-              className="text-3xl font-bold text-center text-white mb-16"
+              className="text-3xl font-bold text-center text-[rgb(var(--primary))] dark:text-white mb-16"
             >
               SECURITY TIPS & CAREER SUPPORT
             </motion.h2>
@@ -430,7 +432,7 @@ export default function Home() {
                   <div className="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition-colors" />
                   <div className="absolute inset-0 p-6 flex flex-col justify-end">
                     <h3 className="text-white font-bold mb-4">{tip.title}</h3>
-                    <Button variant="outline" className="text-[#00A19B] border-[#00A19B] w-fit">
+                    <Button variant="outline" className="text-[#2A8B8B] border-[#2A8B8B] w-fit">
                       Read More
                     </Button>
                   </div>
